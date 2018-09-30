@@ -4,8 +4,8 @@ Shirt Store UI is a Angular project generated with Angular CLI.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. 
-shirt-store-ui calls a HTTP service in order to retrieve a list of shirts from a backend. To avoid CORS `ng serve` will also setup a `proxy-config`.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. 
+shirt-store-ui calls a HTTP service in order to retrieve a list of shirts from a backend. To avoid CORS `npm start` will also setup a `proxy-config`.
 
 ## Development server proxy
 
