@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-outline-secondary" (click)="openModal('cart-modal')">
+  Shopping Cart 
+  <span class="badge" 
+    [class.badge-warning]="shoppingCart.length === 0"
+    [class.badge-success]="shoppingCart.length > 0">
+      {{shoppingCart.length}}
+  </span>
+  <span class="sr-only">items added to chart</span>  
+</button>
+
+<app-modal id="cart-modal">
+  <h1>Shopping Cart</h1>
+  <hr/>
+  <h4>You have selected {{shoppingCart.length}} items</h4>
+  <div id="cartList" class="row" *ngFor="let shirt of shoppingCart">
+    <div class="col-sm">
+      {{shirt.name}}
+    </div>
+    <div class="col-sm">
+      {{shirt.size}}
+    </div>
+    <div class="col-sm">
+      {{shirt.price}}
+    </div>
+    <div class="col-sm">
+      <button type="button" class="btn btn-danger" (click)="removeItem(shirt)">Remove</button>
+    </div>
+  </div>
+  <hr/>
+  <h3>Total: {{getTotalPrice()}}</h3>
+</app-modal>

@@ -1,0 +1,9 @@
+{
+    "/api": {
+        "target": "https://fast-eyrie-77564.herokuapp.com/",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {"^/api" : ""}
+    }
+}

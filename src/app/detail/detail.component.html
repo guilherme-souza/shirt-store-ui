@@ -1,0 +1,19 @@
+<div id="details" *ngIf="shirt">
+    <h1>Details of {{ shirt.name }}</h1>
+    
+    <hr/>
+    
+    <img src="{{shirt.picture}}"/>
+    
+    <hr/>
+    
+    <h2>Price: {{shirt.price}}</h2>
+    <h3>Size: {{shirt.size}}</h3>
+    <h3>Colour: {{shirt.colour}}</h3>
+    <h3>Quantity: {{shirt.quantity}}</h3>
+    
+    <hr/>
+    
+    <button type="button" class="btn btn-success btn-lg btn-block" (click)="addToCart(shirt)">{{getButtonLabel()}}</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/list">Back</button>
+</div>

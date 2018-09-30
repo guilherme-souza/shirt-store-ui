@@ -1,0 +1,28 @@
+<h1>List of shirts</h1>
+
+<hr/>
+
+<div id="filter" class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Filter by: </span>
+  </div>
+  <input type="text" aria-label="Size" placeholder="Size" maxlength="2" class="form-control" [(ngModel)]="filterBySize">
+  <input type="text" aria-label="Colour" placeholder="Colour" maxlength="10" class="form-control" [(ngModel)]="filterByColour">
+</div>
+
+<hr/>
+
+<div id="resultsList" class="card-deck">
+  <div class="card" *ngFor="let shirt of shirts | filter: filterBySize:filterByColour">
+    <div class="card-body">
+      <h5 class="card-title">{{shirt.name | uppercase}}</h5>
+      <p class="card-text">
+        Size: {{shirt.size}} | 
+        Color: {{shirt.colour}}
+      </p>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-outline-dark" (click)="selectShirt(shirt)" routerLink="/detail">See Details</a>
+    </div>
+  </div>
+</div>
